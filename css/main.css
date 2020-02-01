@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body{
   width: 100%;
   height: 100vh;
@@ -8,6 +11,7 @@ body{
   overflow: hidden;
 }
 
+/* 시작 화면 css */
 .welcome-section{
   position: absolute;
   width: 100%;
@@ -71,12 +75,13 @@ body{
   transform: translate3d(0, -30px, 0);
 }
 
+/* 메뉴 css */
 .menu{
   position: fixed;
   top: 30%;
+  width: 180px;
   z-index: 1;
 }
-
 .menu ul{
   list-style-type: none;
   padding: 0;
@@ -128,10 +133,13 @@ body{
   transition: all 1s;
 }
 
+/* 섹션 css */
 section{
   width: 100%;
   height: 100vh;
 }
+
+/* main 섹션 css */
 .maintext{
   position: relative;
   margin: 0 auto;
@@ -142,6 +150,7 @@ section{
   font-size: 70px;
 }
 
+/* profile 섹션 css */
 .probox{
   position: relative;
   top:30%;
@@ -165,4 +174,63 @@ section{
   top: 15%;
   left: 50%;
   font-size: 30px;
+}
+
+/* portfolio 섹션 css */
+.portbox{
+  position: relative;
+  display: inline-flex;
+  top: 50%;
+}
+.middle{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.card{
+  cursor:pointer;
+  width: 360px;
+  height: 360px;
+  margin-right: 5px;
+}
+.front, .back{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+}
+.front img{
+  height: 100%;
+  width: 100%;
+}
+.front{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back{
+  background: #f1f1f1;
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content{
+  color: #222;
+  text-align: center;
+  width: 100%;
+}
+.back-content a{
+  color: #222;
+  text-decoration: none;
+}
+.pagelink{
+  margin: 20px 0;
+}
+.pagelink a{
+  display: inline-flex;
+}
+.card:hover > .front{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
 }

@@ -6,6 +6,7 @@
   <title>Portfolio Page</title>
   <link type="text/css" rel="stylesheet" href="C:\Users\유완규\Desktop\mypage\css\main.css">
   <link type="text/css" href="https://fonts.googleapis.com/css?family=Dancing+Script|PT+Sans:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
   <script src="https://kit.fontawesome.com/718d2a65f9.js" crossorigin="anonymous"></script>
 </head>
@@ -56,15 +57,16 @@
 
   <section id="main">
     <div class="maintext">
-      <h1>Welcome to my portfolio page</h1>
+      <h1>Welcome To My Portfolio Page</h1>
+      <!-- <h2>← Click the menu!</h2> -->
     </div>
   </section>
   <section id="profile">
     <div class="probox">
       <div class="proimg">
-        <img src="C:\Users\유완규\Desktop\mypage\img\1572075998332.jpg">
+        <img data-aos="fade-right" src="C:\Users\유완규\Desktop\mypage\img\1572075998332.jpg">
       </div>
-      <div class="protext">
+      <div data-aos="fade-left" class="protext">
         <p>NAME: 유 창 훈</p>
         <p>E-MAIL: ckdgns950227@gmail.com</p>
         <p>PHONE: 010-9418-6461</p>
@@ -72,12 +74,41 @@
     </div>
   </section>
   <section id="portfolio">
-
+    <div class="portbox">
+      <div class="card middle">
+        <div class="front">
+          <img src="C:\Users\유완규\Desktop\mypage\img\jflapage.png">
+        </div>
+        <div class="back">
+          <div class="back-content middle">
+            <a target="_blank" href="https://skylar950227.github.io/JFlaFanPage/"><h2>J.Fla Fan Page <i class="fas fa-desktop"></i></h2></a>
+            <p>HTML / CSS / JavaScript / Responsive</p>
+          </div>
+        </div>
+      </div>
+      <div class="card middle">
+        <div class="front">
+          <img src="C:\Users\유완규\Desktop\mypage\img\portfoliopage.png">
+        </div>
+        <div class="back">
+          <div class="back-content middle">
+            <a target="_blank" href="https://skylar950227.github.io/JFlaFanPage/"><h2>Portfolio Page <i class="fas fa-desktop"></i></h2></a>
+            <p>HTML / CSS / JavaScript</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <section id="skill">
 
   </section>
   <script type="text/javascript" src="C:\Users\유완규\Desktop\mypage\js\main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 2500,
+    });
+  </script>
 </body>
 
 </html>
